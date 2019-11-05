@@ -21,4 +21,11 @@ program
   .action(() => {
     prompt(questions).then(input => searchBook(input));
   });
+
+//Add book from search
+program
+  .command('add')
+  .alias('a')
+  .description('add book to database')
+  .action(() => {});
 program.parse(process.argv);
