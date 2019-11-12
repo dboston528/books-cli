@@ -7,7 +7,7 @@ After downloading the folder application:
 
 After that, you should use the following command to search for books using the command line interface:
 
-`node books.js search`
+`node books.js search` or `node books.js s`
 
 You will be prompted:
 "What book would you like to search for?"
