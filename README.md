@@ -3,11 +3,11 @@ We are currently on version 1.0
 
 After downloading the folder application:
 
-`cd` into the folder and run npm install, so you have all of your dependencies
+`cd` into the folder and run `npm install`, so you have all of your dependencies.
 
-After that, you use the following command to search for books using the command line interface:
+After that, you should use the following command to search for books using the command line interface:
 
-`node book.js search`
+`node books.js search`
 
 You will be prompted:
 "What book would you like to search for?"
