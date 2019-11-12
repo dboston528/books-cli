@@ -1,5 +1,5 @@
 # Welcome to the google books cli book management system!
-We are currently on version 1.0
+We are currently on version 1.0.0
 
 After downloading the folder application:
 
