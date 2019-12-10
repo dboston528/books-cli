@@ -1,20 +1,25 @@
 # Welcome to the google books cli book management system!
 
-We are currently on version 1.0.0
+We are currently on version 1.0.0 of th application
 
 After downloading the folder application:
 
 `cd` into the folder and run `npm install`, so you have all of your dependencies.
 
+## I should probably mention the requirements:
+
 Reccomended node version
 10.15.1
 
-check node version run `node -v`
+You can check the node version by running `node -v` in your terminal.
 
-Don't have node?
-Heade over to the (Node.js)[https://nodejs.org/en/] web site to get it installed.
+## Don't have node?
 
-If you After that, you should use the following command to search for books using the command line interface:
+Head over to the [Node.js](https://nodejs.org/en/) website to get it installed on your machine.
+
+## How to use the application
+
+After getting everything set up, you can use the following command to search for books using the terminal:
 
 `node books.js search` or `node books.js s`
 
