@@ -8,7 +8,7 @@ const db = mongoose.connect('mongodb://localhost:27017/bookcli', {
   useUnifiedTopology: true
 });
 
-//seaech for book using google api
+//search for book using google api
 searchBook = input => {
   const url = 'https://www.googleapis.com/books/v1/volumes?q=';
   axios
