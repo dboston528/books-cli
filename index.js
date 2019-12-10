@@ -1,16 +1,19 @@
 const axios = require('axios');
 const mongoose = require('mongoose');
+const config = require('./config/config.js');
+
+process.env.NODE_ENV = 'development';
 
 mongoose.Promise = global.Promise;
 
-const db = mongoose.connect('mongodb://localhost:27017/bookcli', {
+const db = mongoose.connect(global.gConfig.database, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
 
 //search for book using google api
 searchBook = input => {
-  const url = 'https://www.googleapis.com/books/v1/volumes?q=';
+  const url = global.gConfig.google_api;
   axios
     .get(
       url +

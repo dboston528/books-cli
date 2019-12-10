@@ -1,0 +1,22 @@
+{
+  "development": {
+    "config_id": "development",
+    "app_name": "books-cli",
+    "app_desc": "This app allows yo to use the command line to search google books",
+    "json_indentation": 4,
+    "database": "mongodb://localhost:27017/bookcli",
+    "google_api": "https://www.googleapis.com/books/v1/volumes?q="
+  },
+  "testing": {
+    "config_id": "testing",
+    "database": "my-app-db-stag"
+  },
+  "staging": {
+    "config_id": "staging",
+    "database": "my-app-db-stag"
+  },
+  "production": {
+    "config_id": "production",
+    "database": "my-app-db-prod"
+  }
+}
