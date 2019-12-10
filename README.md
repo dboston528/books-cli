@@ -1,11 +1,20 @@
 # Welcome to the google books cli book management system!
+
 We are currently on version 1.0.0
 
 After downloading the folder application:
 
 `cd` into the folder and run `npm install`, so you have all of your dependencies.
 
-After that, you should use the following command to search for books using the command line interface:
+Reccomended node version
+10.15.1
+
+check node version run `node -v`
+
+Don't have node?
+Heade over to the (Node.js)[https://nodejs.org/en/] web site to get it installed.
+
+If you After that, you should use the following command to search for books using the command line interface:
 
 `node books.js search` or `node books.js s`
 
