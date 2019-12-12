@@ -42,7 +42,7 @@ searchBook = input => {
 
 //add book to my data base
 const addBook = () => {
-  Book.create(customer).then(book => {
+  Book.create(book).then(book => {
     ('You have added a book!');
     mongoose.connection.close();
   });

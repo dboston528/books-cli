@@ -13,6 +13,8 @@ Reccomended node version
 
 You can check the node version by running `node -v` in your terminal.
 
+Right now we are using MongoDB for book starage. [Install](https://docs.mongodb.com/manual/installation/) it if you don't have it.
+
 ## Don't have node?
 
 Head over to the [Node.js](https://nodejs.org/en/) website to get it installed on your machine.
@@ -26,6 +28,6 @@ After getting everything set up, you can use the following command to search for
 You will be prompted:
 "What book would you like to search for?"
 
-You can input the book of your liking, and up to 5 results will be returned in JSON formatting.
+You can input the book of your liking, and up to 5 results will be returned in JSON formatting inluding the book title, authors, and the publishing company.
 
-After that, the idea is to be able to select from the results and be able to add one to your collection using MongoDB. That is still in development and will be public soon.
+After that, the idea is to be able to select from the results and be able to add one to your personal collection using MongoDB. This is still in development, and will be public soon.
