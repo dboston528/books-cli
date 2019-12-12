@@ -11,6 +11,8 @@ const db = mongoose.connect(global.gConfig.database, {
   useUnifiedTopology: true
 });
 
+const Book = require('./models/book');
+
 //search for book using google api
 searchBook = input => {
   const url = global.gConfig.google_api;
@@ -24,8 +26,16 @@ searchBook = input => {
     .then(res => {
       try {
         const response = res.data.items;
-        const books = response.map(book => book.volumeInfo);
+        const books = response.map(
+          book =>
+            book.volumeInfo.title +
+            ' Authors:' +
+            book.volumeInfo.authors +
+            ' Publishers:' +
+            book.volumeInfo.publisher
+        );
         console.info(books);
+        lastBookResult = books;
         mongoose.connection.close();
       } catch (err) {
         console.info(
@@ -40,12 +50,17 @@ searchBook = input => {
     });
 };
 
+const results = res => {
+  let resultsArray = res.data.items;
+  return resultsArray;
+};
+
 //add book to my data base
-const addBook = () => {
-  Book.create(customer).then(book => {
+const addBook = book => {
+  Book.create(book).then(book => {
     ('You have added a book!');
     mongoose.connection.close();
   });
 };
 
-module.exports = { searchBook };
+module.exports = { searchBook, addBook, results };
