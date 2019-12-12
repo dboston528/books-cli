@@ -34,8 +34,8 @@ searchBook = input => {
             ' Publishers:' +
             book.volumeInfo.publisher
         );
+        return books;
         console.info(books);
-        lastBookResult = books;
         mongoose.connection.close();
       } catch (err) {
         console.info(
@@ -48,11 +48,6 @@ searchBook = input => {
         }
       }
     });
-};
-
-const results = res => {
-  let resultsArray = res.data.items;
-  return resultsArray;
 };
 
 //add book to my data base

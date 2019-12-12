@@ -26,18 +26,15 @@ program
   .description('Search for a book')
   .action(() => {
     prompt(questions[0]).then(input => {
+      searchBook(input);
       var results = searchBook(input);
-      console.log('Thes are my' + results);
-      var testArray = ['Hello', 'Mother Fucker'];
-
       const question = {
         type: 'list',
-        choices: searchBook(input),
+        choices: results,
         message: 'Which book do you want to save?',
         name: 'name'
       };
       prompt(question);
-      searchBook(input);
     });
   });
 
@@ -49,7 +46,5 @@ program
   .action(() => {
     prompt(questions[1]);
   });
-
-//testing this funciton out to add
 
 program.parse(process.argv);
