@@ -27,11 +27,15 @@ searchBook = input => {
         const books = response.map(book => book.volumeInfo);
         console.info(books);
         mongoose.connection.close();
-      } catch (error) {
+      } catch (err) {
         console.info(
           'Houston we have a problem. That query did not return any results.'
         );
         mongoose.connection.close();
+        console.log(err);
+        if (error.response) {
+          console.log('Hello');
+        }
       }
     });
 };
