@@ -1,6 +1,6 @@
 const program = require('commander');
 const { prompt } = require('inquirer');
-const { searchBook, results, addBook } = require('./index');
+const { searchBook, addBook } = require('./index');
 
 program.version('1.0.0').description('Google books management system');
 
@@ -15,7 +15,7 @@ const questions = [
     type: 'list',
     name: 'theme',
     message: 'Choose a book to add to your list!',
-    choices: results
+    choices: ['test', 'test']
   }
 ];
 
@@ -27,14 +27,6 @@ program
   .action(() => {
     prompt(questions[0]).then(input => {
       searchBook(input);
-      var results = searchBook(input);
-      const question = {
-        type: 'list',
-        choices: results,
-        message: 'Which book do you want to save?',
-        name: 'name'
-      };
-      prompt(question);
     });
   });
 

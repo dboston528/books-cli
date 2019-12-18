@@ -34,7 +34,7 @@ searchBook = input => {
             ' Publishers:' +
             book.volumeInfo.publisher
         );
-        return books;
+        // return books;
         console.info(books);
         mongoose.connection.close();
       } catch (err) {
@@ -58,4 +58,4 @@ const addBook = book => {
   });
 };
 
-module.exports = { searchBook, addBook, results };
+module.exports = { searchBook, addBook };
