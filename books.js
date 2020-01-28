@@ -15,7 +15,7 @@ const questions = [
     type: 'list',
     name: 'theme',
     message: 'Choose a book to add to your list!',
-    choices: ['test', 'test']
+    choices: ['Book 1', 'Book 2']
   }
 ];
 
@@ -34,9 +34,16 @@ program
 program
   .command('add')
   .alias('a')
-  .description('add book to database')
+  .description('Add book to database')
   .action(() => {
-    prompt(questions[1]);
+    prompt(questions[1]).then(answers => addBook(answers));
   });
+
+//
+program
+  .command('list')
+  .alias('l')
+  .description('List all books')
+  .action(() => listBooks());
 
 program.parse(process.argv);
